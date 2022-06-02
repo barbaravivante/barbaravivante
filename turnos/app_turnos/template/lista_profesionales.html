@@ -1,0 +1,61 @@
+{% extends "padre.html" %}
+
+{%  load static %}
+
+
+{% block contenido %}
+    
+<section class="projects-section bg-light" id="projects"></section>
+ <!-- Project One Row-->
+ <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+    <div class="col-lg-6"><img class="img-fluid" src="{% static 'app_turnos/assets/img/6.png' %}" alt="..." /></div>
+    <div class="col-lg-6">
+        <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-left">
+                    <h4 class="text-white">Listado de Entrenadores:</h4>
+                    <p></p>
+                    <p class="mb-0 text-white-50">
+                        
+                    
+                        <table class="table" style="color: #ffffff ;">
+                            <thead>
+                              <tr>
+                                <th scope="col">N°</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Teléfono</th>
+                                <th scope="col">Turno</th>
+                              </tr>
+                            </thead>
+                            {% for profesionales in datos %}
+                            <tbody>
+                                <tr>
+                                    <th scope="row">{{profesionales.id}}</th>
+                                    <td>{{profesionales.nombre}}</td>
+                                    <td>{{profesionales.telefono}}</td>
+                                    <td>{{profesionales.turno}}</td>
+                                </tr>
+                            </tbody>
+                            {% endfor %}  
+                        </table>                            
+                        
+                    </p>
+                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="social d-flex justify-content-center">
+    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+    <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+</div>
+</div>
+</section>
+<!-- Footer-->
+<footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; EntrenadordeRunning 2022</div></footer>              
+</div>
+        </section>
+        <!-- Footer-->
+{% endblock %}           

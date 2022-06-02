@@ -1,0 +1,58 @@
+{% extends "padre.html" %}
+
+{%  load static %}
+
+
+{% block contenido %}
+
+ <!-- About-->
+ <section class="projects-section bg-light" id="projects"></section>
+ <section class="about-section text-center" id="projects">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="post-subtitle" >Alta Entrenadores:</h2>
+                <p class="text-white-50">
+                    <form action="alta_profesionales" method="POST">
+                        {% csrf_token %}
+                   
+                    <h6 class="post-subtitle">Nombre:</h6>
+                    <p class="post-meta">
+                        <input type="text" name="nombre" required>
+                    </p>
+                    <h6 class="post-subtitle">Telefono:</h6>
+                    <p class="post-meta">
+                        <input type="number" name="telefono" required>
+                    </p>
+                    <h6 class="post-subtitle">Turno:</h6>
+                    <p class="post-meta">
+                       <input type="text" name="turno" required>
+                        
+                    </p>
+                
+                    <input type="submit" value="Enviar">
+                
+                
+                    </form>
+                </p>
+            </div>
+        </div>
+        <img class="img-fluid" src="{% static 'app_turnos/assets/img/8.jpg' %}" alt="..." />
+    </div>
+</section>
+<div class="social d-flex justify-content-center">
+    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+    <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+</div>
+</div>
+</section>
+<!-- Footer-->
+<footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; EntrenadordeRunning 2022</div></footer>              
+</div>
+        </section>
+        <!-- Footer-->
+{% endblock %}  
+
+
+                
